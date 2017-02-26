@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>Patient Details</h2>
+  <div class="row">
+  <div class="col-sm-6">
+    <form novalidate="true">
+    <div class="form-group">
+      <label for="fname">First Name:</label>
+      <input type="text" class="form-control" id="fname" ng-model="p.fname" placeholder="Enter First Name">
+    </div>
+    <div class="form-group">
+      <label for="lname">Last Name:</label>
+      <input type="text" class="form-control" id="lname" ng-model="p.lname" placeholder="Enter Last Name">
+    </div>
+    <div class="form-group">
+      <label for="dob">D.O.B</label>
+      <input type="date" class="form-control" id="dob" ng-model="p.dob" placeholder="Enter Date of Birth">
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" class="form-control" id="phoneNumber"ng-model="p.phoneNumber" placeholder="Enter Phone No (10 digits)">
+    </div>
+    <div class="form-group control-group error">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email" ng-model="p.email" placeholder="Enter Email (someone@something.somedomain)">
+    </div>
+  </form>
+</div>
+  <div class="col-sm-6">
+    <form>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <div class="radio">
+          <label><input type="radio" ng-model="p.gender" value="Male" name="gender">Male</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" ng-model="p.gender" value="Female" name="gender">Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" ng-model="p.age" id="age" placeholder="Enter Age" min="1" max="150">
+      </div>
+      <div class="form-group">
+        <label for="description">Description :</label>
+        <input type="textarea" class="form-control" ng-model="p.desc" id="desc" placeholder="Enter the detailed description of the problem incuding symptoms reported.">
+      </div>
+      <div class="form-group">
+        <label for="dosage">Dosage :</label>
+        <input type="textarea" class="form-control" ng-model="p.dosage" id="dosage" placeholder="Enter the dosage given,previous if any">
+      </div>
+      <button type="submit" class="btn btn-success" ng-click="add()" >Submit</button>
+    </form>
+  </div>
+
+</div>
+</div>
